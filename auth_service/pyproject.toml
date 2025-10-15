@@ -1,7 +1,7 @@
 [project]
-name = "Contxta"
+name = "contxta-auth"
 version = "0.1.0"
-description = "User Authentication service part from a Contxta project"
+description = "User Authentication service - part of Contxta project"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -18,3 +18,11 @@ dependencies = [
 dev = [
     "drf-yasg>=1.21.11",
 ]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["config*", "UserAuth*"]
